@@ -54,7 +54,7 @@ echo "LOOKUP_TABLE default"
 cat nlvls.out
 fi
 # put partition data if they exist
-for dir in $(ls --color=no -d dist_* || true); do
+for dir in $(find -O1 -type d -name dist_\* || true); do
 echo "SCALARS $dir int"
 echo "LOOKUP_TABLE default"
 awk '
